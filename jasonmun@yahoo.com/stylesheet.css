@@ -1,0 +1,11 @@
+.line-view {
+	spacing: 12px;
+}
+
+.panel-button .line-view {
+	spacing: 6px;
+}
+
+.menu-item-edit {
+	font-size: smaller;
+}
