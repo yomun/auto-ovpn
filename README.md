@@ -35,7 +35,10 @@ or<br>
 $ git clone https://github.com/yomun/auto-ovpn.git<br>
 $ cd auto-ovpn<br>
 $ mv jasonmun@yahoo.com ~/.local/share/gnome-shell/extensions<br>
-
+<br>
+If you use KDE, you may using Auto OVPN (Python 3)<br>
+https://github.com/yomun/auto-ovpn-py<br>
+<br>
 ## Acknowledgments
 
 Auto OVPN includes (https://github.com/p-e-w/argos)
