@@ -22,8 +22,11 @@ $ sudo zypper install openvpn NetworkManager-openvpn NetworkManager-openvpn-gnom
 ## Installation
 
 ### From the GNOME Shell Extensions website (recommended)
+(https://extensions.gnome.org/extension/1270/auto-ovpn/)
 
-https://extensions.gnome.org/extension/1270/auto-ovpn/
+$ git clone https://github.com/yomun/auto-ovpn.git<br>
+$ cd auto-ovpn<br>
+$ mv -p jasonmun@yahoo.com ~/.local/share/gnome-shell/extensions<br>
 
 ## Acknowledgments
 
