@@ -4,6 +4,9 @@
 
 ![Screencast](https://extensions.gnome.org/extension-data/screenshots/screenshot_1270.png)
 
+http://jasonmun.blogspot.my/2017/08/gnome-shell-extensions-auto-ovpn.html
+<br>
+
 ## Requirements
 
 Before using Auto OVPN, <br>
@@ -26,7 +29,9 @@ $ sudo zypper install openvpn NetworkManager-openvpn NetworkManager-openvpn-gnom
 
 ### From the GNOME Shell Extensions website (recommended)
 (https://extensions.gnome.org/extension/1270/auto-ovpn/)
-
+<br><br>
+or<br>
+<br>
 $ git clone https://github.com/yomun/auto-ovpn.git<br>
 $ cd auto-ovpn<br>
 $ mv jasonmun@yahoo.com ~/.local/share/gnome-shell/extensions<br>
