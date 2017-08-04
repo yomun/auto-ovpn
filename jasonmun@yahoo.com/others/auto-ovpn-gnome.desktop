@@ -1,0 +1,17 @@
+[Desktop Entry]
+Name=Auto OVPN
+GenericName=Auto OVPN
+MimeType=
+Exec=python3 /home/yomun/.local/share/gnome-shell/extensions/jasonmun@yahoo.com/auto-ovpn.py
+Icon=/home/yomun//.local/share/gnome-shell/extensions/jasonmun@yahoo.com/icon.png
+Categories=Application;Utility;
+Comment=VPN Gate Agent
+Encoding=UTF-8
+Type=Application
+Hidden=true
+NoDisplay=true
+StartupNotify=false
+Terminal=false
+X-KDE-StartupNotify=false
+X-MultipleArgs=false
+Name[en_US]=auto-ovpn-gnome.desktop
