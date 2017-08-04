@@ -9,17 +9,17 @@
 Before using Auto OVPN, <br>
 we need install OpenOVPN at your Gnome Network Manager and Curl for download OVPN files in backend<br><br>
 
-# Ubuntu / Linux Mint / Debian<br>
+#### Ubuntu / Linux Mint / Debian<br>
 $ sudo apt install openvpn network-manager-openvpn network-manager-openvpn-gnome curl
 <br><br>
-# Fedora<br>
+#### Fedora<br>
 $ sudo dnf install openvpn NetworkManager-openvpn NetworkManager-openvpn-gnome curl
 <br><br>
-# CentOS 7<br>
+#### CentOS 7<br>
 $ sudo yum install http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm<br>
 $ sudo yum install openvpn NetworkManager-openvpn NetworkManager-openvpn-gnome curl
 <br><br>
-# OpenSUSE<br>
+#### OpenSUSE<br>
 $ sudo zypper install openvpn NetworkManager-openvpn NetworkManager-openvpn-gnome curl
 <br>
 ## Installation
