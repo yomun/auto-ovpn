@@ -7,7 +7,7 @@
 ## Requirements
 
 Before using Auto OVPN, <br>
-we need install OpenOVPN at your Gnome Network Manager and Curl for download OVPN files in backend<br><br>
+we need install OpenVPN at your Gnome Network Manager and Curl for download OVPN files in backend<br><br>
 
 #### Ubuntu / Linux Mint / Debian<br>
 $ sudo apt install openvpn network-manager-openvpn network-manager-openvpn-gnome curl
