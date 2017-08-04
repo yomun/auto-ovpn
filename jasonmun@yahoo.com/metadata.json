@@ -1,0 +1,10 @@
+{
+"shell-version": ["3.24.2"], 
+"uuid": "jasonmun@yahoo.com", 
+"description": "Easy to use VPN Gate on Linux", 
+"name": "Auto OVPN",
+"extension-id": "auto-ovpn",
+"settings-schema": "org.gnome.shell.extensions.auto-ovpn",
+"gettext-domain": "auto-ovpn",
+"url": "http://jasonmun.blogspot.my"
+}
