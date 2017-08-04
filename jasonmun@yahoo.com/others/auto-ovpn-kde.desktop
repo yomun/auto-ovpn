@@ -1,0 +1,21 @@
+[Desktop Entry]
+Comment[en_US]=
+Comment=
+Exec=python3 /home/yomun/.local/share/gnome-shell/extensions/jasonmun@yahoo.com/auto-ovpn.py
+GenericName[en_US]=
+GenericName=
+Icon=/home/yomun//.local/share/gnome-shell/extensions/jasonmun@yahoo.com/icon.png
+MimeType=
+Name[en_US]=Auto OVPN
+Name=Auto OVPN
+NoDisplay=false
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-RunOnDiscreteGpu=false
+X-KDE-SubstituteUID=false
+X-KDE-Username=
