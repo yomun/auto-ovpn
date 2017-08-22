@@ -14,17 +14,17 @@ we need install OpenVPN at your Gnome Network Manager and Curl for download OVPN
 
 #### Ubuntu / Linux Mint / Debian<br>
 $ sudo apt install openvpn network-manager-openvpn network-manager-openvpn-gnome curl
-<br><br>
+<br>
 #### Fedora<br>
 $ sudo dnf install openvpn NetworkManager-openvpn NetworkManager-openvpn-gnome curl
-<br><br>
+<br>
 #### CentOS 7<br>
 $ sudo yum install http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm<br>
 $ sudo yum install openvpn NetworkManager-openvpn NetworkManager-openvpn-gnome curl
-<br><br>
+<br>
 #### OpenSUSE<br>
 $ sudo zypper install openvpn NetworkManager-openvpn NetworkManager-openvpn-gnome curl
-<br><br>
+<br>
 #### Antergos / Manjaro<br>
 $ sudo pacman -S openvpn networkmanager-openvpn curl<br>
 <br>
