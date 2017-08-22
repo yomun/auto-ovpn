@@ -26,7 +26,7 @@ $ sudo yum install openvpn NetworkManager-openvpn NetworkManager-openvpn-gnome c
 $ sudo zypper install openvpn NetworkManager-openvpn NetworkManager-openvpn-gnome curl
 <br>
 #### Antergos / Manjaro<br>
-$ sudo pacman -S openvpn networkmanager-openvpn curl<br>
+$ sudo pacman -S openvpn networkmanager-openvpn curl
 <br>
 #### Solus<br>
 $ sudo eopkg install openvpn networkmanager-openvpn curl<br>
