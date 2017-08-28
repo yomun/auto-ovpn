@@ -30,7 +30,7 @@ const Main    = imports.ui.main;
 const Extension  = imports.misc.extensionUtils.getCurrentExtension();
 const flags_path = Extension.path + "/flags/";
 
-let DEFAULT_ICON_SIZE = 24;
+let DEFAULT_ICON_SIZE = 18;
 
 const BoxLayout = new Lang.Class({
 	Name: "BoxLayout",
@@ -48,7 +48,7 @@ const BoxLayout = new Lang.Class({
 		let flags_file_path = "";
 		
 		if (country_code.length == 2) {
-			flags_file_path = flags_path + country_code.toLowerCase() + ".png";
+			flags_file_path = flags_path + country_code.toUpperCase() + ".png";
 		} else {
 			flags_file_path = Extension.path + "/icon.png";
 		}
