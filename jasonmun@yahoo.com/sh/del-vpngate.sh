@@ -1,7 +1,8 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #
 # Auto OVPN gnome extension
 # https://jasonmun.blogspot.my
+# https://github.com/yomun/auto-ovpn
 # 
 # Copyright (C) 2017 Jason Mun
 # 
@@ -16,7 +17,7 @@
 # GNU General Public License for more details.
 # 
 # You should have received a copy of the GNU General Public License
-# along with Show Ip gnome extension.  If not, see <http://www.gnu.org/licenses/>.
+# along with Auto OVPN gnome extension.  If not, see <http://www.gnu.org/licenses/>.
 # 
 ###############################################
 # delete inactive VPNGate from Network Manager
@@ -52,7 +53,8 @@ function del_all_OVPN_VPN()
 		nmcli con down ${vpn_name}
 		nmcli con delete ${vpn_name}
 	done
-	
+
+	notify-send -i "${DATA_PATH}/icon.png" "Auto OVPN" "All of VPN Connection successfully deleted."	
 	sleep 1
 }
 

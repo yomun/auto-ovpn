@@ -1,7 +1,8 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #
 # Auto OVPN gnome extension
 # https://jasonmun.blogspot.my
+# https://github.com/yomun/auto-ovpn
 # 
 # Copyright (C) 2017 Jason Mun
 # 
@@ -16,7 +17,7 @@
 # GNU General Public License for more details.
 # 
 # You should have received a copy of the GNU General Public License
-# along with Show Ip gnome extension.  If not, see <http://www.gnu.org/licenses/>.
+# along with Auto OVPN gnome extension.  If not, see <http://www.gnu.org/licenses/>.
 # 
 ##############################
 # use for download ovpn files
@@ -62,7 +63,17 @@ while read line; do
 		ip=`echo ${arr_n[1]}`
 		pt=`echo ${arr_n[2]} | sed $'s/[\\r]//'`
 
-		PFilename="${PFOLDER}/${FILE_PREFIX}${ip}_${proto}_${pt}${FILE_TYPE}"
+		COUNTRY_CODE=`geoiplookup ${ip} | sed 's/^.*: //' | sed 's/,.*//' | head -n1`
+		LEN_COUNTRY_CODE=`echo ${#COUNTRY_CODE}`
+
+		PFilename=""
+
+		if [ ${LEN_COUNTRY_CODE} -eq 2 ]
+		then
+			PFilename="${PFOLDER}/${FILE_PREFIX}${COUNTRY_CODE}_${ip}_${proto}_${pt}${FILE_TYPE}"
+		else
+			PFilename="${PFOLDER}/${FILE_PREFIX}${ip}_${proto}_${pt}${FILE_TYPE}"
+		fi
 
 		echo "${data_ori}" > "${PFilename}"
 		

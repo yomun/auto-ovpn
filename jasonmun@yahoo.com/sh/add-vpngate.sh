@@ -1,7 +1,8 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #
 # Auto OVPN gnome extension
 # https://jasonmun.blogspot.my
+# https://github.com/yomun/auto-ovpn
 # 
 # Copyright (C) 2017 Jason Mun
 # 
@@ -16,11 +17,11 @@
 # GNU General Public License for more details.
 # 
 # You should have received a copy of the GNU General Public License
-# along with Show Ip gnome extension.  If not, see <http://www.gnu.org/licenses/>.
+# along with Auto OVPN gnome extension.  If not, see <http://www.gnu.org/licenses/>.
 # 
-############################################################################
-# add {FOLDER}/vpngate_{IP}_{PROTOCOL}_{PORT}.ovpn to Network Manager
-############################################################################
+########################################################################################
+# add {FOLDER}/vpngate_{COUNTRY-CODE}_{IP}_{PROTOCOL}_{PORT}.ovpn to Network Manager
+########################################################################################
 
 NUMBER_RE='^[0-9]+$'
 
@@ -39,6 +40,21 @@ DATA_PATH=`echo "${SHELL_PATH}" | sed -e 's/\/sh$//'`
 PFOLDER="${DATA_PATH}/${FOLDER}"
 
 POVPN_PATTERN="${PFOLDER}/${FILE_PREFIX}*${FILE_TYPE}"
+
+COUNTRY_CODE=""
+
+if [ ${#1} -eq 2 ] || [ ${#2} -eq 2 ]
+then
+	if [ ${#1} -eq 2 ]
+	then
+		COUNTRY_CODE="${1}"
+	elif [ ${#2} -eq 2 ]
+	then
+		COUNTRY_CODE="${2}"
+	else
+		COUNTRY_CODE=""
+	fi
+fi
 
 # import OVPN to Network Manager
 function import_OVPN()
@@ -78,9 +94,23 @@ function check_OVPN()
 	fi
 	
 	if  [ ${total} -gt 0 ]
-	then
+	then		
 		# ls -itr
 		OVPN_LIST=`ls -tr ${POVPN_PATTERN} | tr "\n" " "`
+		
+		if [ `echo ${#COUNTRY_CODE}` -eq 2 ]
+		then			
+			local PATTERN_COUNTRY_CODE="${PFOLDER}/${FILE_PREFIX}${COUNTRY_CODE}_*${FILE_TYPE}"
+			
+			local LIST_COUNTRY_CODE=`ls -tr ${PATTERN_COUNTRY_CODE} | tr "\n" " "`
+			
+			if [ `echo ${#LIST_COUNTRY_CODE} | bc` -gt 10 ]
+			then
+				OVPN_LIST=`echo ${OVPN_LIST} | sed -e 's/${PATTERN_COUNTRY_CODE} //'`
+				
+				OVPN_LIST=`echo "${LIST_COUNTRY_CODE} ${OVPN_LIST}" | tr "\n" " "`
+			fi	
+		fi
 
 		import_OVPN
 	fi

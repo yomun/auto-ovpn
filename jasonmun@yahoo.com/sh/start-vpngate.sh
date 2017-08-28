@@ -1,7 +1,8 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #
 # Auto OVPN gnome extension
 # https://jasonmun.blogspot.my
+# https://github.com/yomun/auto-ovpn
 # 
 # Copyright (C) 2017 Jason Mun
 # 
@@ -16,7 +17,7 @@
 # GNU General Public License for more details.
 # 
 # You should have received a copy of the GNU General Public License
-# along with Show Ip gnome extension.  If not, see <http://www.gnu.org/licenses/>.
+# along with Auto OVPN gnome extension.  If not, see <http://www.gnu.org/licenses/>.
 # 
 ##################################################
 # every ${MAX_SECONDS} to check VPN is connected
@@ -37,6 +38,30 @@ CLEAN_SHELL="${SHELL_PATH}/clean-vpngate.sh"
 ADD_SHELL="${SHELL_PATH}/add-vpngate.sh"
 
 MAX_SECONDS=15
+
+WIFI_MODE=""
+DEFAULT_COUNTRY_CODE=""
+
+if [ "${1}" = "wifi" ] || [ "${2}" = "wifi" ]
+then
+	if [ ${1} == 'wifi' ]
+	then
+		WIFI_MODE="wifi"
+		DEFAULT_COUNTRY_CODE="${2}"
+	elif [ ${2} == 'wifi' ]
+	then
+		WIFI_MODE="wifi"
+		DEFAULT_COUNTRY_CODE="${1}"
+	else
+		WIFI_MODE=""
+		DEFAULT_COUNTRY_CODE=""
+	fi
+else
+	DEFAULT_COUNTRY_CODE="${1}"
+fi
+
+# echo "[MODE] " ${WIFI_MODE}
+# echo "[CODE] " ${DEFAULT_COUNTRY_CODE}
 
 function check_VPN()
 {
@@ -60,7 +85,7 @@ function check_VPN()
 				# clean VPN
 				bash ${CLEAN_SHELL}
 				# insert to VPN, keep OVPN
-				bash ${ADD_SHELL}
+				bash ${ADD_SHELL} ${DEFAULT_COUNTRY_CODE}
 			fi
 		fi
 	done
@@ -76,6 +101,7 @@ function connect_VPN()
 		if [ "${try_conn}" != "${conn_vpn/VPN connection successfully activated /}" ]
 		then
 			# Success
+			notify-send -i "${DATA_PATH}/icon.png" "${vpn_name}" "VPN connection successfully activated."
 			break
 		else
 			# Not success				
@@ -86,6 +112,8 @@ function connect_VPN()
 	done
 }
 
+nmcli radio wifi on
+
 total_vpn_active=`nmcli con show --active | grep -c ' vpn '`
 
 if [ "${total_vpn_active}" = "0" ]
@@ -94,9 +122,15 @@ then
 	bash ${CLEAN_SHELL}
 	
 	# insert to VPN, keep OVPN
-	bash ${ADD_SHELL}
+	bash ${ADD_SHELL} ${DEFAULT_COUNTRY_CODE}
 
 	check_VPN
 else
-    bash "${SHELL_PATH}/stop-vpngate.sh"
+	if [ "${WIFI_MODE}" = "wifi" ]
+	then
+		notify-send -i "${DATA_PATH}/icon.png" "Auto OVPN" "WIFI connection is closed.."
+		nmcli radio wifi off
+	fi
+	
+	bash "${SHELL_PATH}/stop-vpngate.sh"
 fi
