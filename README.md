@@ -13,10 +13,12 @@ Before using Auto OVPN, <br>
 we need install OpenVPN at your Gnome Network Manager and Curl for download OVPN files in backend<br><br>
 
 #### Ubuntu / Linux Mint / Debian / Zorin OS<br>
-$ sudo apt install openvpn network-manager-openvpn network-manager-openvpn-gnome curl geoip-bin geoip-database geoip-database-extra
+$ sudo apt install openvpn network-manager-openvpn network-manager-openvpn-gnome curl<br>
+$ sudo apt install geoip-bin geoip-database geoip-database-extra
 <br>
 #### Fedora<br>
-$ sudo dnf install openvpn NetworkManager-openvpn NetworkManager-openvpn-gnome curl GeoIP GeoIP-GeoLite-data GeoIP-GeoLite-data-extra
+$ sudo dnf install openvpn NetworkManager-openvpn NetworkManager-openvpn-gnome curl<br>
+$ sudo dnf install GeoIP GeoIP-GeoLite-data GeoIP-GeoLite-data-extra
 <br>
 #### CentOS 7<br>
 $ sudo yum install http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm<br>
