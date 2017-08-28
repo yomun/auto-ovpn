@@ -1,14 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <schemalist gettext-domain="auto-ovpn">
-	<schema id="org.gnome.shell.extensions.auto-ovpn" path="/org/gnome/shell/extensions/auto-ovpn/">
-		<key name="public" type="b">
-			<default>false</default>
-			<summary>Display public IP address</summary>
-			<description>Set to true to display the public version of your address in the status bar</description>
+	<enum id="org.gnome.shell.extensions.auto-ovpn.position">
+		<value value="0" nick="left"/>
+		<value value="1" nick="center"/>
+		<value value="2" nick="right"/>
+	</enum>
+	<enum id="org.gnome.shell.extensions.auto-ovpn.country-code">
+		<value value="0" nick="ALL"/>
+		<value value="1" nick="CN"/>
+		<value value="2" nick="JP"/>
+		<value value="3" nick="KR"/>
+		<value value="4" nick="US"/>
+	</enum>
+	<schema path="/org/gnome/shell/extensions/auto-ovpn/" id="org.gnome.shell.extensions.auto-ovpn">
+		<key type="i" name="refresh-rate">
+			<default>30</default>
+			<summary>Check every x seconds</summary>
 		</key>
-		<key name="ip-lookup-service" type="s">
-			<default>'http://ipinfo.io/ip'</default>
-			<summary>Service providing public IP lookup</summary>
-			<description>Set the webservice providing public IP lookup</description>
+		<key type="b" name="compact-mode">
+			<default>false</default>
+			<summary>Only show flag in toolbar</summary>
+		</key>
+		<key type="b" name="wifi-mode">
+			<default>false</default>
+			<summary>Turn off Wifi Network</summary>
+		</key>
+		<key name="position-in-panel" enum="org.gnome.shell.extensions.auto-ovpn.position">
+			<default>'right'</default>
+			<summary>Position in Panel</summary>
+		</key>
+		<key name="country-code" enum="org.gnome.shell.extensions.auto-ovpn.country-code">
+			<default>'ALL'</default>
+			<summary>VPN source prefer</summary>
 		</key>
 	</schema>
 </schemalist>
