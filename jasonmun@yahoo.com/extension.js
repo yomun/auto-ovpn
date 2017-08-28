@@ -1,6 +1,7 @@
 /*
  * Auto OVPN gnome extension
  * https://jasonmun.blogspot.my
+ * https://github.com/yomun/auto-ovpn
  * 
  * Copyright (C) 2017 Jason Mun
  *
@@ -15,7 +16,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with Show Ip gnome extension.  If not, see <http://www.gnu.org/licenses/>.
+ * along with Auto OVPN gnome extension.  If not, see <http://www.gnu.org/licenses/>.
  * 
  */
 
@@ -40,7 +41,6 @@ let directoryMonitor;
 let buttons = [];
 
 function init() {
-	// Convenience.initTranslations();
 	readConfigFile();
 }
 
@@ -51,8 +51,6 @@ function readConfigFile() {
 	/*
 	if (!directory.query_exists(null)) {
 		directory.make_directory(null);
-		
-		Main.notify("HELLO ?");
 
 		let scriptPath = GLib.build_filenamev([directoryPath, "argos.sh"]);
 
