@@ -2,7 +2,7 @@
 <h3 align="center">Easy to use VPN Gate on Linux (Gnome)</h3>
 <br>
 
-![Screencast](https://extensions.gnome.org/extension-data/screenshots/screenshot_1270.png)
+![Screencast](https://extensions.gnome.org/extension-data/screenshots/screenshot_1270_GPwnlPo.png)
 
 http://jasonmun.blogspot.my/2017/08/gnome-shell-extensions-auto-ovpn.html
 <br>
@@ -56,4 +56,3 @@ Auto OVPN includes (https://github.com/p-e-w/argos)
 Copyright &copy; 2017 Jason Mun (<jasonmun@yahoo.com>)
 
 Released under the terms of the [GNU General Public License, version 3](https://gnu.org/licenses/gpl.html)
-
