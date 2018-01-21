@@ -1,0 +1,1 @@
+This tools is let you easy to use VPN Gate on Linux (Gnome)

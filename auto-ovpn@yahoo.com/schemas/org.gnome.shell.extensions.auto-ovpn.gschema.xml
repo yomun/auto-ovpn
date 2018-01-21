@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="auto-ovpn">
+	<enum id="org.gnome.shell.extensions.auto-ovpn.check-ip">
+		<value value="0" nick="OpenDNS.com"/>
+		<value value="1" nick="Google.com"/>
+	</enum>
+	<enum id="org.gnome.shell.extensions.auto-ovpn.position">
+		<value value="0" nick="left"/>
+		<value value="1" nick="center"/>
+		<value value="2" nick="right"/>
+	</enum>
+	<enum id="org.gnome.shell.extensions.auto-ovpn.icon-size">
+		<value value="0" nick="16"/>
+		<value value="1" nick="24"/>
+		<value value="2" nick="32"/>
+		<value value="3" nick="48"/>
+		<value value="4" nick="64"/>
+	</enum>
+	<enum id="org.gnome.shell.extensions.auto-ovpn.country-code">
+		<value value="0" nick="ALL"/>
+		<value value="1" nick="AR"/>
+		<value value="2" nick="CA"/>
+		<value value="3" nick="CN"/>
+		<value value="4" nick="DE"/>
+		<value value="5" nick="FR"/>
+		<value value="6" nick="GB"/>
+		<value value="7" nick="HK"/>
+		<value value="8" nick="ID"/>
+		<value value="9" nick="JP"/>
+		<value value="10" nick="KR"/>
+		<value value="11" nick="PL"/>
+		<value value="12" nick="RU"/>
+		<value value="13" nick="TH"/>
+		<value value="14" nick="US"/>
+		<value value="15" nick="VE"/>
+		<value value="16" nick="VN"/>
+	</enum>
+	<schema path="/org/gnome/shell/extensions/auto-ovpn/" id="org.gnome.shell.extensions.auto-ovpn">
+		<key type="i" name="refresh-rate">
+			<default>15</default>
+			<summary>Check every x seconds</summary>
+		</key>
+		<key type="b" name="compact-mode">
+			<default>false</default>
+			<summary>Only show flag in toolbar</summary>
+		</key>
+		<key type="b" name="wifi-mode">
+			<default>false</default>
+			<summary>Turn off Wifi Network</summary>
+		</key>
+		<key type="b" name="maps-mode">
+			<default>true</default>
+			<summary>Show Google MAPS</summary>
+		</key>
+		<key name="check-ip" enum="org.gnome.shell.extensions.auto-ovpn.check-ip">
+			<default>'OpenDNS.com'</default>
+			<summary>Server for Check IP</summary>
+		</key>
+		<key name="position-in-panel" enum="org.gnome.shell.extensions.auto-ovpn.position">
+			<default>'right'</default>
+			<summary>Position in Panel</summary>
+		</key>
+		<key name="icon-size" enum="org.gnome.shell.extensions.auto-ovpn.icon-size">
+			<default>'16'</default>
+			<summary>Icon Size</summary>
+		</key>
+		<key name="country-code" enum="org.gnome.shell.extensions.auto-ovpn.country-code">
+			<default>'ALL'</default>
+			<summary>VPN source prefer</summary>
+		</key>
+	</schema>
+</schemalist>

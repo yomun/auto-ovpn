@@ -1,0 +1,31 @@
+.line-view {
+	spacing: 12px;
+}
+
+.panel-button .line-view {
+	spacing: 6px;
+}
+
+.menu-item-edit {
+	font-size: smaller;
+}
+
+.panel-status-menu-box {
+    padding-top: 4px;
+    padding-right: 0px;
+    padding-bottom: 3px;
+    padding-left: 0px;
+}
+
+.ip-info-key {
+	color: #5294e2;
+}
+
+.ip-info-box {
+	padding-left: 20px;
+}
+
+.ip-info-value {
+	color: #838A85;
+}
+
