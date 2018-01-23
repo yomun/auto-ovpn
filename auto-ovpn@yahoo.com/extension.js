@@ -126,7 +126,7 @@ const PanelMenuButton = new Lang.Class({
 		ARR_URL_IP.push("http://www.showip.com/");
 		ARR_URL_IP.push("http://www.showmemyip.com/");
 		ARR_URL_IP.push("http://ifconfig.co/");
-		ARR_URL_IP.push("http://www.checkip.com/");
+		// ARR_URL_IP.push("http://www.checkip.com/");
 		ARR_URL_IP.push("http://www.geoplugin.com/webservices/json");
 		ARR_URL_IP.push("https://www.whatismyip.net/");
 		ARR_URL_IP.push("https://showip.net/");
