@@ -42,12 +42,12 @@ $ sudo eopkg install openvpn networkmanager-openvpn curl bc<br>
 ### From the GNOME Shell Extensions website (recommended)
 (https://extensions.gnome.org/extension/1355/auto-ovpn/)
 <br><br>
-or<br>
-<br>
-$ git clone https://github.com/yomun/auto-ovpn.git<br>
-$ cd auto-ovpn<br>
-$ mv auto-ovpn@yahoo.com ~/.local/share/gnome-shell/extensions<br>
-<br>
+or
+'''
+$ git clone https://github.com/yomun/auto-ovpn.git
+$ cd auto-ovpn
+$ mv auto-ovpn@yahoo.com ~/.local/share/gnome-shell/extensions
+'''
 ## Acknowledgments
 
 Argos (https://github.com/p-e-w/argos)<br>
