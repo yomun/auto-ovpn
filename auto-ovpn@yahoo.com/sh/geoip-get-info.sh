@@ -87,7 +87,7 @@ then
 			i=`echo ${line} | grep -c "GeoIP ASNum Edition: "`
 			if [ "${i}" == "1" ]
 			then
-				i=`echo ${line} | sed 's/.*: //' | sed 's/IP Address not found//'`
+				i=`echo ${line} | sed 's/.*: //' | sed 's/IP Address not found//' | sed 's/, Internet Service Provider//'`
 				ORG=${i}
 			fi
 		done
