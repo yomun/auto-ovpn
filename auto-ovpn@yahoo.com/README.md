@@ -29,7 +29,8 @@ $ sudo yum install http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.no
 $ sudo yum install openvpn NetworkManager-openvpn NetworkManager-openvpn-gnome curl bc GeoIP GeoIP-data
 <br>
 #### OpenSUSE<br>
-$ sudo zypper install openvpn NetworkManager-openvpn NetworkManager-openvpn-gnome curl bc GeoIP GeoIP-data
+$ sudo zypper install openvpn NetworkManager-openvpn NetworkManager-openvpn-gnome<br>
+$ sudo zypper install curl bc GeoIP GeoIP-data
 <br>
 #### Antergos / Manjaro<br>
 $ sudo pacman -S openvpn networkmanager-openvpn curl bc geoip geoip-database geoip-database-extra
@@ -51,7 +52,6 @@ $ mv auto-ovpn@yahoo.com ~/.local/share/gnome-shell/extensions<br>
 ## Acknowledgments
 
 Argos (https://github.com/p-e-w/argos)<br>
-IP-Finder (https://github.com/LinxGem33/IP-Finder)<br>
 Flags (https://github.com/gosquared/flags)<br>
 Google Maps (https://www.google.com/maps)
 
