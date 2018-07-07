@@ -12,57 +12,46 @@ http://jasonmun.blogspot.my/2017/08/gnome-shell-extensions-auto-ovpn.html
 Before using Auto OVPN, <br>
 we need install OpenVPN at your Gnome Network Manager and Curl for download OVPN files in backend<br>
 
-- Ubuntu / Linux Mint / Debian / Zorin OS
-```
-$ sudo apt install openvpn network-manager-openvpn network-manager-openvpn-gnome curl bc
-
+#### Ubuntu / Linux Mint / Debian / Zorin OS<br>
+$ sudo apt install openvpn network-manager-openvpn network-manager-openvpn-gnome curl bc<br>
+<br>
 Install GeoIP is not a must, but suggest to install..
-
-###### GeoIP database
-
-$ sudo apt install geoip-bin geoip-database geoip-database-extra
-
-###### GeoLite database
-
+###### GeoIP database<br>
+$ sudo apt install geoip-bin geoip-database geoip-database-extra<br>
+###### GeoLite database<br>
 $ sudo apt install geoip-bin geoip-database-contrib
-```
-- Fedora
-```
-$ sudo dnf install openvpn NetworkManager-openvpn NetworkManager-openvpn-gnome curl bc
+#### Fedora<br>
+$ sudo dnf install openvpn NetworkManager-openvpn NetworkManager-openvpn-gnome curl bc<br>
 $ sudo dnf install GeoIP GeoIP-GeoLite-data GeoIP-GeoLite-data-extra
-```
-- CentOS 7
-```
-$ sudo yum install http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+<br>
+#### CentOS 7<br>
+$ sudo yum install http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm<br>
 $ sudo yum install openvpn NetworkManager-openvpn NetworkManager-openvpn-gnome curl bc GeoIP GeoIP-data
-```
-- OpenSUSE
-```
-$ sudo zypper install openvpn NetworkManager-openvpn NetworkManager-openvpn-gnome curl bc GeoIP GeoIP-data
-```
-- Antergos / Manjaro
-```
+<br>
+#### OpenSUSE<br>
+$ sudo zypper install openvpn NetworkManager-openvpn NetworkManager-openvpn-gnome<br>
+$ sudo zypper install curl bc GeoIP GeoIP-data
+<br>
+#### Antergos / Manjaro<br>
 $ sudo pacman -S openvpn networkmanager-openvpn curl bc geoip geoip-database geoip-database-extra
-```
-- Solus 3 (Can not install geoip)
-```
-$ sudo eopkg install openvpn networkmanager-openvpn curl bc
-```
+<br>
+#### Solus 3 (Can not install geoip)<br>
+$ sudo eopkg install openvpn networkmanager-openvpn curl bc<br>
+<br>
 ## Installation
 
 ### From the GNOME Shell Extensions website (recommended)
 (https://extensions.gnome.org/extension/1355/auto-ovpn/)
 <br><br>
-or
-```
-$ git clone https://github.com/yomun/auto-ovpn.git
-$ cd auto-ovpn
-$ mv auto-ovpn@yahoo.com ~/.local/share/gnome-shell/extensions
-```
+or<br>
+<br>
+$ git clone https://github.com/yomun/auto-ovpn.git<br>
+$ cd auto-ovpn<br>
+$ mv auto-ovpn@yahoo.com ~/.local/share/gnome-shell/extensions<br>
+<br>
 ## Acknowledgments
 
 Argos (https://github.com/p-e-w/argos)<br>
-IP-Finder (https://github.com/LinxGem33/IP-Finder)<br>
 Flags (https://github.com/gosquared/flags)<br>
 Google Maps (https://www.google.com/maps)
 
