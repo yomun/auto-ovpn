@@ -21,6 +21,7 @@ Install GeoIP is not a must, but suggest to install..
 $ sudo apt install geoip-bin geoip-database geoip-database-extra
 ###### GeoLite database
 $ sudo apt install geoip-bin geoip-database-contrib
+```
 #### Fedora
 ```
 $ sudo dnf install openvpn NetworkManager-openvpn NetworkManager-openvpn-gnome curl bc
