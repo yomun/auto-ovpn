@@ -48,7 +48,7 @@ $ sudo eopkg install openvpn networkmanager-openvpn curl bc
 ## Installation
 
 ### From the GNOME Shell Extensions website (recommended)
-V1 (https://extensions.gnome.org/extension/1270/auto-ovpn/)
+V1 (https://extensions.gnome.org/extension/1270/auto-ovpn/)<br>
 V2 (https://extensions.gnome.org/extension/1355/auto-ovpn/)
 <br><br>
 or
