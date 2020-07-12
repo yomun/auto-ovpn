@@ -3,7 +3,7 @@
   "description": "Easy to use VPN Gate on Linux (Please install OpenVPN first.. The details take a look 'github.com/yomun')", 
   "extension-id": "auto-ovpn", 
   "gettext-domain": "auto-ovpn", 
-  "name": "Auto OVPN (V2)", 
+  "name": "Auto OVPN (v3.36)", 
   "settings-schema": "org.gnome.shell.extensions.auto-ovpn", 
   "shell-version": [
     "3.10", 
@@ -16,10 +16,13 @@
     "3.24", 
     "3.26",
     "3.28",
+    "3.30",
+    "3.32",
+    "3.34",
     "3.36"
   ], 
   "url": "https://github.com/yomun/auto-ovpn", 
   "uuid": "auto-ovpn@yahoo.com", 
-  "version": 27
+  "version": 28
 }
 
