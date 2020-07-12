@@ -20,7 +20,7 @@ $ sudo apt install geoip-bin geoip-database geoip-database-extra
 or
 
 $ sudo apt install openvpn network-manager-openvpn network-manager-openvpn-gnome curl bc
-$ sudo apt install geoip-bin geoip-database-contrib
+$ sudo apt install geoip-bin geoip-database
 ```
 - Fedora
 ```
