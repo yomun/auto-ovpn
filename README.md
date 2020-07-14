@@ -15,12 +15,7 @@ we need install OpenVPN at your Gnome Network Manager and Curl for download OVPN
 - Ubuntu / Linux Mint / Debian / Zorin OS
 ```
 $ sudo apt install openvpn network-manager-openvpn network-manager-openvpn-gnome curl bc
-$ sudo apt install geoip-bin geoip-database geoip-database-extra
-
-or
-
-$ sudo apt install openvpn network-manager-openvpn network-manager-openvpn-gnome curl bc
-$ sudo apt install geoip-bin geoip-database
+$ sudo apt install geoip-bin
 ```
 - Fedora
 ```
