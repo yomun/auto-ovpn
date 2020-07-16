@@ -78,7 +78,8 @@ function import_OVPN()
 			### echo "[ADD VPN] ${pOVPN}"
 			nmcli connection import type openvpn file ${pOVPN}
 
-			cnt=`echo "${cnt}+1" | bc`
+			### cnt=`echo "${cnt}+1" | bc`
+			cnt=$((cnt+1))
 			
 			if [ ${cnt} -eq ${total} ]; then break; fi
 		fi
@@ -108,7 +109,8 @@ function check_OVPN()
 			
 			local LIST_COUNTRY_CODE=`ls -tr ${PATTERN_COUNTRY_CODE} | tr "\n" " "`
 			
-			if [ `echo ${#LIST_COUNTRY_CODE} | bc` -gt 10 ]
+			### if [ `echo ${#LIST_COUNTRY_CODE} | bc` -gt 10 ]
+			if [ $((LIST_COUNTRY_CODE)) -gt 10 ]
 			then
 				OVPN_LIST=`echo ${OVPN_LIST} | sed -e 's/${PATTERN_COUNTRY_CODE} //'`
 				
@@ -122,7 +124,8 @@ function check_OVPN()
 
 VPNGATE_TOTAL=`nmcli con show | grep " vpn " | grep -c "^vpngate_"`
 
-ADD_TOTAL=`echo "${MAX_VPN}-${VPNGATE_TOTAL}" | bc`
+### ADD_TOTAL=`echo "${MAX_VPN}-${VPNGATE_TOTAL}" | bc`
+ADD_TOTAL=$((MAX_VPN - VPNGATE_TOTAL))
 
 if [ ${ADD_TOTAL} -gt 0 ]
 then
