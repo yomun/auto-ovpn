@@ -14,31 +14,31 @@ we need install OpenVPN at your Gnome Network Manager and Curl for download OVPN
 
 - Ubuntu / Linux Mint / Debian / Zorin OS
 ```
-$ sudo apt install openvpn network-manager-openvpn network-manager-openvpn-gnome curl bc
+$ sudo apt install openvpn network-manager-openvpn network-manager-openvpn-gnome curl
 $ sudo apt install geoip-bin
 ```
 - Fedora
 ```
-$ sudo dnf install openvpn NetworkManager-openvpn NetworkManager-openvpn-gnome curl bc
+$ sudo dnf install openvpn NetworkManager-openvpn NetworkManager-openvpn-gnome curl
 $ sudo dnf install GeoIP GeoIP-GeoLite-data GeoIP-GeoLite-data-extra
 ```
 - CentOS 7
 ```
 $ sudo yum install http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-$ sudo yum install openvpn NetworkManager-openvpn NetworkManager-openvpn-gnome curl bc GeoIP GeoIP-data
+$ sudo yum install openvpn NetworkManager-openvpn NetworkManager-openvpn-gnome curl GeoIP GeoIP-data
 ```
 - OpenSUSE
 ```
 $ sudo zypper install openvpn NetworkManager-openvpn NetworkManager-openvpn-gnome
-$ sudo zypper install curl bc GeoIP GeoIP-data
+$ sudo zypper install curl GeoIP GeoIP-data
 ```
 - Antergos / Manjaro
 ```
-$ sudo pacman -S openvpn networkmanager-openvpn curl bc geoip geoip-database geoip-database-extra
+$ sudo pacman -S openvpn networkmanager-openvpn curl geoip geoip-database geoip-database-extra
 ```
 - Solus 3 (Can not install geoip)
 ```
-$ sudo eopkg install openvpn networkmanager-openvpn curl bc
+$ sudo eopkg install openvpn networkmanager-openvpn curl
 ```
 ## Installation
 
