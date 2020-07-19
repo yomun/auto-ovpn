@@ -52,7 +52,7 @@ $ git clone https://github.com/yomun/auto-ovpn.git
 $ cd auto-ovpn
 $ mv auto-ovpn@yahoo.com ~/.local/share/gnome-shell/extensions
 ```
-Click 'Alt+F2', then type 'r' for restart the GNOME shell-extension
+Click 'Alt+F2', then type 'r' at 'Run a Command' for restart the GNOME shell-extension
 
 ## Acknowledgments
 
