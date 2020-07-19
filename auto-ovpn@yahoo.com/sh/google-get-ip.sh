@@ -43,8 +43,8 @@ if [[ ${IP} =~ ${IP_RE} ]]
 then
 	echo "${IP}"
 else
-	# 1- 16
-	RAN=`echo $((1 + RANDOM % 16))`
+	# 1- 12
+	RAN=`echo $((1 + RANDOM % 12))`
 	case ${RAN} in
 		1)  IP=`curl http://ipinfo.io/ip`;;
 		2)  IP=`curl https://api.ipify.org`;;
@@ -56,7 +56,9 @@ else
 		8)  IP=`curl http://www.showmemyip.com/                | grep -Eo "(Your IP address is: )[0-9.]*" | grep -Eo "[0-9.]*"`;;
 		9)  IP=`curl https://api.userinfo.io/userinfos         | grep -Eo "(\"ip_address\":\")[0-9.]*"    | grep -Eo "[0-9.]*"`;;
 		10) IP=`curl http://www.showip.com/                    | grep "Your IP address is "               | grep -Eo "[0-9.]*"`;;
-		*)  IP=`curl http://www.geoplugin.com/webservices/json | grep "\"geoplugin_request\":\""          | grep -Eo "[0-9.]*"`;;
+		11) IP=`curl http://www.geoplugin.com/webservices/json | grep "\"geoplugin_request\":\""          | grep -Eo "[0-9.]*"`;;
+		*)  IP=`curl https://checkip.org                       | grep "Your IP Address:"                  | grep -Eo "[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+"`;;
+		
 	esac
 
 	if [[ ${IP} =~ ${IP_RE} ]]
