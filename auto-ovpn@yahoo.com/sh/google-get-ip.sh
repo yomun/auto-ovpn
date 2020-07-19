@@ -31,10 +31,10 @@ IP_OUTPUT=""
 if [ ${#INPUT_STR} -gt 0 ]
 then
 	# echo "+"
-	IP_OUTPUT=`dig TXT +short o-o.myaddr.l.google.com @ns1.google.com`
+	IP_OUTPUT=`dig -4 TXT +short o-o.myaddr.l.google.com @ns1.google.com`
 else
 	# echo "-"
-	IP_OUTPUT=`dig +short myip.opendns.com @resolver1.opendns.com`
+	IP_OUTPUT=`dig -4 +short myip.opendns.com @resolver1.opendns.com`
 fi
 
 IP=`echo ${IP_OUTPUT} | sed "s/\"//g"`
