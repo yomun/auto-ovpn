@@ -58,7 +58,7 @@ else
 		10) IP=`curl https://api.userinfo.io/userinfos         | grep -Eo "(\"ip_address\":\")[0-9.]*"    | grep -Eo "[0-9.]*"`;;
 		11) IP=`curl http://www.showip.com/                    | grep "Your IP address is "               | grep -Eo "[0-9.]*"`;;
 		12) IP=`curl http://www.geoplugin.com/webservices/json | grep "\"geoplugin_request\":\""          | grep -Eo "[0-9.]*"`;;
-		13) IP=`curl https://checkip.org                       | grep "Your IP Address:"                  | grep -Eo "[0-9]+\.[0-9]+\.[0-9]+\.[0-9
+		13) IP=`curl https://checkip.org                       | grep "Your IP Address:"                  | grep -Eo "[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+"`;;
 		14) IP=`curl https://checkip.hk                        | grep "Your IP Address:"                  | grep -Eo "[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+"`;;
 		 *) IP=`curl https://who.is                            | grep "Your IP address is"                | grep -Eo "[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+" | head -1`;;
 		
