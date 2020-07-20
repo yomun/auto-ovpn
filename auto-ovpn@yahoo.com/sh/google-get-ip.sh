@@ -55,7 +55,7 @@ else
 		7)  IP=`curl http://ipecho.net/                        | grep -Eo "(Your IP is )[0-9.]*"          | sed "s/Your IP is //g"`;;
 		8)  IP=`curl https://l2.io/ip.js?var=myip              | grep -Eo "[0-9.]*"`;;
 		9)  IP=`curl http://www.showmemyip.com/                | grep -Eo "(Your IP address is: )[0-9.]*" | grep -Eo "[0-9.]*"`;;
-		10)  IP=`curl https://api.userinfo.io/userinfos         | grep -Eo "(\"ip_address\":\")[0-9.]*"    | grep -Eo "[0-9.]*"`;;
+		10) IP=`curl https://api.userinfo.io/userinfos         | grep -Eo "(\"ip_address\":\")[0-9.]*"    | grep -Eo "[0-9.]*"`;;
 		11) IP=`curl http://www.showip.com/                    | grep "Your IP address is "               | grep -Eo "[0-9.]*"`;;
 		12) IP=`curl http://www.geoplugin.com/webservices/json | grep "\"geoplugin_request\":\""          | grep -Eo "[0-9.]*"`;;
 		13) IP=`curl https://checkip.org                       | grep "Your IP Address:"                  | grep -Eo "[0-9]+\.[0-9]+\.[0-9]+\.[0-9
