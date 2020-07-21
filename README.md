@@ -17,7 +17,7 @@ we need install OpenVPN at your Gnome Network Manager and Curl for download OVPN
 $ sudo apt install openvpn network-manager-openvpn network-manager-openvpn-gnome curl
 $ sudo apt install geoip-bin
 
-##### replace of geoip-database-contrib / geoip-database-extra
+----- replace of geoip-database-contrib / geoip-database-extra -----
 $ wget https://mailfud.org/geoip-legacy/GeoIPASNum.dat.gz
 $ wget https://mailfud.org/geoip-legacy/GeoIPCity.dat.gz
 
