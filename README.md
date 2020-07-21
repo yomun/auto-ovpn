@@ -16,6 +16,14 @@ we need install OpenVPN at your Gnome Network Manager and Curl for download OVPN
 ```
 $ sudo apt install openvpn network-manager-openvpn network-manager-openvpn-gnome curl
 $ sudo apt install geoip-bin
+
+$ wget https://mailfud.org/geoip-legacy/GeoIPASNum.dat.gz
+$ wget https://mailfud.org/geoip-legacy/GeoIPCity.dat.gz
+
+$ gunzip GeoIPCity.dat.gz
+$ gunzip GeoIPASNum.dat.gz
+
+$ sudo mv *.dat /usr/share/GeoIP
 ```
 - Fedora
 ```
