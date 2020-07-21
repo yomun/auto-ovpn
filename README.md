@@ -23,7 +23,7 @@ $ wget https://mailfud.org/geoip-legacy/GeoIPCity.dat.gz
 $ gunzip GeoIPCity.dat.gz
 $ gunzip GeoIPASNum.dat.gz
 
-$ sudo mv *.dat /usr/share/GeoIP
+$ sudo mv GeoIP*.dat /usr/share/GeoIP
 ```
 - Fedora
 ```
