@@ -426,6 +426,7 @@ const PanelMenuButton = new Lang.Class({
 		this._prevCheckIP      = this._checkIP;
 		this._prevCountryCode  = this._countryCode;
 		this._prevRefreshRate  = this._refreshRate;
+		this._prevMapsMode     = false;
 
 		this._mapsMode     = this._settings.get_boolean(SETTINGS_MAPS_MODE);
 		this._wifiMode     = this._settings.get_boolean(SETTINGS_WIFI_MODE);
@@ -433,6 +434,7 @@ const PanelMenuButton = new Lang.Class({
 		this._checkIP      = this._settings.get_string(SETTINGS_CHECK_IP);
 		this._countryCode  = this._settings.get_string(SETTINGS_COUNTRY_CODE);
 		this._refreshRate  = this._settings.get_int(SETTINGS_REFRESH_RATE);
+		this._mapsMode     = false;
 	},
 	
 	setShowHide: function() {
