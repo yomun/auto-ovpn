@@ -115,8 +115,10 @@ function connect_VPN()
 {
 	for vpn_name in $VPN_LIST
 	do
+		ip=`echo "${vpn_name}" | grep -Eo "[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+"`
+		
 		# ping before connect
-		PVALS=`ping -c 1 219.100.37.240 | sed 's/^.*mdev \= //g' | tail -n 1 | sed 's/ ms//g' | sed 's/\// /g'`
+		PVALS=`ping -c 1 ${ip} | sed 's/^.*mdev \= //g' | tail -n 1 | sed 's/ ms//g' | sed 's/\// /g'`
 
 		LINE=`echo ${PVALS}`
 
@@ -126,8 +128,8 @@ function connect_VPN()
 			COLS+=("$val")
 		done
 		
-		#if [ `echo ${COLS[3]}` == "0.000" ]
-		#then
+		if [ `echo ${COLS[3]}` == "0.000" ]
+		then
 			# connect..
 			try_conn=`nmcli con up ${vpn_name}`
 
@@ -142,10 +144,10 @@ function connect_VPN()
 			
 				nmcli con delete ${vpn_name}
 			fi
-		#else
-		#	rm -rf ${PFOLDER}/${vpn_name}${FILE_TYPE}
-		#	nmcli con delete ${vpn_name}
-		#fi
+		else
+			rm -rf ${PFOLDER}/${vpn_name}${FILE_TYPE}
+			nmcli con delete ${vpn_name}
+		fi
 	done
 }
 
