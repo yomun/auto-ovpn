@@ -115,18 +115,35 @@ function connect_VPN()
 {
 	for vpn_name in $VPN_LIST
 	do
-		# connect..
-		try_conn=`nmcli con up ${vpn_name}`
+		# ping before connect
+		PVALS=`ping -c 1 219.100.37.240 | sed 's/^.*mdev \= //g' | tail -n 1 | sed 's/ ms//g' | sed 's/\// /g'`
 
-		if [ "${try_conn}" != "${conn_vpn/VPN connection successfully activated /}" ]
+		LINE=`echo ${PVALS}`
+
+		COLS=()
+ 
+		for val in $LINE ; do
+			COLS+=("$val")
+		done
+		
+		if [ `echo ${COLS[3]}` == "0.000" ]
 		then
-			# Success
-			MSG=`notify-send -i "${DATA_PATH}/icon.png" "${vpn_name}" "VPN connection successfully activated."`
-			break
-		else
-			# Not success				
-			rm -rf ${PFOLDER}/${vpn_name}${FILE_TYPE}
+			# connect..
+			try_conn=`nmcli con up ${vpn_name}`
+
+			if [ "${try_conn}" != "${conn_vpn/VPN connection successfully activated /}" ]
+			then
+				# Success
+				MSG=`notify-send -i "${DATA_PATH}/icon.png" "${vpn_name}" "VPN connection successfully activated."`
+				break
+			else
+				# Not success				
+				rm -rf ${PFOLDER}/${vpn_name}${FILE_TYPE}
 			
+				nmcli con delete ${vpn_name}
+			fi
+		else
+			rm -rf ${PFOLDER}/${vpn_name}${FILE_TYPE}
 			nmcli con delete ${vpn_name}
 		fi
 	done
