@@ -126,8 +126,8 @@ function connect_VPN()
 			COLS+=("$val")
 		done
 		
-		if [ `echo ${COLS[3]}` == "0.000" ]
-		then
+		#if [ `echo ${COLS[3]}` == "0.000" ]
+		#then
 			# connect..
 			try_conn=`nmcli con up ${vpn_name}`
 
@@ -142,10 +142,10 @@ function connect_VPN()
 			
 				nmcli con delete ${vpn_name}
 			fi
-		else
-			rm -rf ${PFOLDER}/${vpn_name}${FILE_TYPE}
-			nmcli con delete ${vpn_name}
-		fi
+		#else
+		#	rm -rf ${PFOLDER}/${vpn_name}${FILE_TYPE}
+		#	nmcli con delete ${vpn_name}
+		#fi
 	done
 }
 
